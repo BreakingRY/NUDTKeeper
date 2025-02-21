@@ -8,4 +8,5 @@
 
 1.  本项目修改自(https://github.com/fy-hb/keep).
 2.  原作者: 寒冰[@fyhb][https://github.com/fy-hb].
-3.  本项目的静态网页->[https://tokimi.online:60073]
+3.  本项目的静态网页->[https://v4.nudtkeeper.xyz:45678]
+4.  建议访问纯ipv6站点->[https://nudtkeeper.xyz]
