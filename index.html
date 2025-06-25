@@ -397,7 +397,7 @@
                 </li>
                 <li>
                     <label>配速：</label>
-                    <input id="inpt_speeds" onchange="setData()" type="text">
+                    <input id="inpt_speeds" onchange="setData()" type="text"><label style="color: red;">⚠️注意小数部分不要超过60⚠️</label>
                 </li>
                 <li>
                     <label>时间：</label>
@@ -435,6 +435,7 @@
                         <option value="guiji_Select_1">一田</option>
                         <option value="guiji_Select_2">二田</option>
                         <option value="guiji_Select_3">三田</option>
+                        <option value="guiji_Select_4">环校跑</option>
                     </select>
                 </li>
                 <li>
@@ -463,6 +464,11 @@
                         <option value="['images/三田-2.jpg', 'images/三田.jpg']">预设2</option>
                         <option value="['images/三田-3.jpg', 'images/三田.jpg']">预设3</option>
                         <option value="['images/三田.jpg', 'images/三田.jpg']">空</option>
+                    </select>
+                    <select onchange="guijiSelect_onChange()" id="guiji_Select_4" class="guijiSelect">
+                        <option value="['images/环校-1.jpg', 'images/环校.jpg']">预设1</option>
+                        <option value="['images/环校-2.jpg', 'images/环校.jpg']">预设2</option>
+                        <option value="['images/环校.jpg', 'images/环校.jpg']">空</option>
                     </select>
                 </li>
                 <li>
@@ -1068,7 +1074,7 @@
         //初始化
         window.onload = function() {
             miles = Math.floor((2 + Math.random() * 3) * 100) / 100;
-            speeds = Math.floor((4 + Math.random() * 6) * 100) / 100;
+            speeds = Math.floor(4 + Math.random() * 6) + Math.floor(Math.random() * 60) / 100;
             let datetime_now = new Date();
             date_year = datetime_now.getFullYear();
             date_month = datetime_now.getMonth() + 1;
